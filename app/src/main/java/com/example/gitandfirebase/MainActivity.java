@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,7 +40,12 @@ public class MainActivity extends AppCompatActivity {
                 // Failed to read value
                 Log.w("ok", "Failed to read value.", error.toException());
             }
+
         });
+
+    }
+    public void Test (View view){
+        myRef.setValue("Goodbye, World!");
     }
 
 
